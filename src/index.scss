@@ -1,138 +1,142 @@
-.rb-Container {
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: space-between;
-  height: 100%;
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+$primary: rgb(67, 49, 154);
+$shadow-color: rgba(0, 0, 0, 0.1);
+
+@mixin standard-shadow {
+  box-shadow: 1px 1px 1px 1px $shadow-color;
+}
+
+@mixin standard-padding {
+  padding: 10px 10px 10px 10px;
+}
+
+html {
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+}
+
+.container {
+  display: inline-block;
+}
+
+.card {
+  @include standard-shadow;
+  max-height: 250px;
+  max-width: 400px;
+  margin: auto;
+}
+
+.card-title {
+  height: 120px;
+  @include standard-padding;
+  background: url('https://pbs.twimg.com/profile_images/656211422398033920/k7asWvHS.jpg');
+}
+
+.card-title-text {
+  margin: auto;
   position: relative;
+  top: 90px;
+  color: rgb(255, 255, 255);
+  font-size: 24px;
+  font-weight: 300;
+  line-height: normal;
 }
 
-.rb-Card {
-  margin-bottom: 48px;
+.card-supporting-text {
+  @include standard-padding;
+  color: rgba(0,0,0,.54);
+  font-size: 1rem;
+  line-height: 18px;
+  width: 90%;
+  overflow: hidden;
+}
+
+.card-actions {
+  padding: 8px 8px 8px 8px;
+  border-top: 1px solid rgb(230, 230, 230);
+}
+
+.action-button {
+  color: $primary;
   position: relative;
+  display: inline-block;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  padding-left: 16px;
+  padding-right: 16px;
+  height: 36px;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  line-height: 36px;
+  vertical-align: middle;
+
+  &:hover {
+    @include standard-shadow;
+    background-color: $shadow-color;
+  }
 }
 
-.rb-ContainerPosts {
-  // margin-bottom: 2rem;
-  // overflow: scroll;
+.flex-container {
+  margin-top: 25px;
 }
 
-  // body, html {
-  //   padding: 0;
-  //   margin: 0;
-  //   text-align: center;
-  // }
+.flex-card {
+  @include standard-shadow;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 400px;
+}
 
-// /* Styles the thumbnail */
-//
-// a.lightbox img {
-// height: 150px;
-// border: 3px solid white;
-// box-shadow: 0px 0px 8px rgba(0,0,0,.3);
-// margin: 94px 20px 20px 20px;
-// }
-//
-// /* Styles the lightbox, removes it from sight and adds the fade-in transition */
-//
-// .lightbox-target {
-// position: fixed;
-// top: -100%;
-// width: 100%;
-// background: rgba(0,0,0,.7);
-// width: 100%;
-// opacity: 0;
-// -webkit-transition: opacity .5s ease-in-out;
-// -moz-transition: opacity .5s ease-in-out;
-// -o-transition: opacity .5s ease-in-out;
-// transition: opacity .5s ease-in-out;
-// overflow: hidden;
-// }
-//
-// /* Styles the lightbox image, centers it vertically and horizontally, adds the zoom-in transition and makes it responsive using a combination of margin and absolute positioning */
-//
-// .lightbox-target img {
-// margin: auto;
-// position: absolute;
-// top: 0;
-// left:0;
-// right:0;
-// bottom: 0;
-// max-height: 0%;
-// max-width: 0%;
-// border: 3px solid white;
-// box-shadow: 0px 0px 8px rgba(0,0,0,.3);
-// box-sizing: border-box;
-// -webkit-transition: .5s ease-in-out;
-// -moz-transition: .5s ease-in-out;
-// -o-transition: .5s ease-in-out;
-// transition: .5s ease-in-out;
-// }
-//
-// /* Styles the close link, adds the slide down transition */
-//
-// a.lightbox-close {
-// display: block;
-// width:50px;
-// height:50px;
-// box-sizing: border-box;
-// background: white;
-// color: black;
-// text-decoration: none;
-// position: absolute;
-// top: -80px;
-// right: 0;
-// -webkit-transition: .5s ease-in-out;
-// -moz-transition: .5s ease-in-out;
-// -o-transition: .5s ease-in-out;
-// transition: .5s ease-in-out;
-// }
-//
-// /* Provides part of the "X" to eliminate an image from the close link */
-//
-// a.lightbox-close:before {
-// content: "";
-// display: block;
-// height: 30px;
-// width: 1px;
-// background: black;
-// position: absolute;
-// left: 26px;
-// top:10px;
-// -webkit-transform:rotate(45deg);
-// -moz-transform:rotate(45deg);
-// -o-transform:rotate(45deg);
-// transform:rotate(45deg);
-// }
-//
-// /* Provides part of the "X" to eliminate an image from the close link */
-//
-// a.lightbox-close:after {
-// content: "";
-// display: block;
-// height: 30px;
-// width: 1px;
-// background: black;
-// position: absolute;
-// left: 26px;
-// top:10px;
-// -webkit-transform:rotate(-45deg);
-// -moz-transform:rotate(-45deg);
-// -o-transform:rotate(-45deg);
-// transform:rotate(-45deg);
-// }
-//
-// /* Uses the :target pseudo-class to perform the animations upon clicking the .lightbox-target anchor */
-//
-// .lightbox-target:target {
-// opacity: 1;
-// top: 0;
-// bottom: 0;
-// }
-//
-// .lightbox-target:target img {
-// max-height: 100%;
-// max-width: 100%;
-// }
-//
-// .lightbox-target:target a.lightbox-close {
-// top: 0px;
-// }
+.flex-card-title {
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+  height: 120px;
+  flex-grow: 1;
+  background: url('https://pbs.twimg.com/profile_images/656211422398033920/k7asWvHS.jpg');
+}
+
+.flex-card-title-text {
+  position: relative;
+  top: 60px;
+  left: 10px;
+}
+
+.flex-card-supporting-text {
+  color: rgba(0, 0, 0, 0.54);
+  font-weight: 500;
+  font-size: 16px;
+  margin-left: 10px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.flex-card-actions {
+  padding: 8px 8px 8px 8px;
+  border-top: 1px solid rgba(200, 200, 200, 0.2);
+}
+
+.flex-action-button {
+  padding: 0px 16px 0px 16px;
+  color: $primary;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: 36px;
+  text-decoration: none;
+  text-transform: uppercase;
+  height: 36px;
+  position: relative;
+  display: inline-block;
+
+  &:hover {
+    @include standard-shadow;
+    background-color: $shadow-color;
+  }
+}
