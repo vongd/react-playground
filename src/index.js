@@ -1,54 +1,68 @@
 import React, { Component } from 'react';
-import { render } from 'react-dom';
+import ReactDOM from 'react-dom';
 import './index.scss';
 
-class App extends Component {
+//class App extends Component {}
 
-  render() {
+var Page = React.createClass({
+  render: function() {
     return (
-      <div className="outer-container">
-        <div className="container">
-          <div className="header"></div>
-          <div className="card">
-            <div className="card-title">
-              <h2 className="card-title-text">Things!</h2>
-            </div>
-            <div className="card-supporting-text">
-             This is the description of my card. It tells you
-             a little about the main content.
-            </div>
-            <div className="card-actions">
-              <a className="button action-button ripple-effect">
-                Do things
-              </a>
-            </div>
-          </div>
-        </div>
-        <div className="flex-container">
-          <div className="flex-card">
-            <div className="flex-card-title">
-              <h2 className="flex-card-title-text">Things!</h2>
-            </div>
-            <div className="flex-card-supporting-text">
-             This is the description of my card. It tells you
-             a little about the main content.
-            </div>
-            <div className="flex-card-actions">
-              <a className="flex-button flex-action-button flex-ripple-effect">
-                Do things
-              </a>
-            </div>
-          </div>
-        </div>
+      <div>
+      <HeaderBar/>
+      <BodyText/>
+      <FooterBar/>
       </div>
     );
   }
-}
+});
 
-window.performance.mark('begin');
-render(
-  <App />,
+var HeaderBar = React.createClass({
+  render: function() {
+    return (
+      <div className="headerBar">
+        <ul className="left-side">
+  				<li><a href="#">BRAND</a></li>
+  				<li><a href="#">SERVICES</a></li>
+  				<ul className="dropdown">
+  					<li><a href="#">Weddings</a></li>
+  					<li><a href="#">Portraits</a></li>
+  				</ul>
+  				<ul className="sub-menu2">
+  					<li><a href="#">School</a></li>
+  					<li><a href="#">Family</a></li>
+  				</ul>
+  			</ul>
+  			<ul className="right-side">
+  				<li><a href="#">SIGN UP</a></li>
+  				<li><a href="#">LOG IN</a></li>
+  				<li><a href="#">HELP</a></li>
+  			</ul>
+      </div>
+    );
+  }
+});
+
+var BodyText = React.createClass({
+  render: function() {
+    return (
+      <div className="bodyText">
+      BODY
+      </div>
+    );
+  }
+});
+
+var FooterBar = React.createClass({
+  render: function() {
+    return (
+      <div className="footerBar">
+      FOOTER
+      </div>
+    );
+  }
+});
+
+ReactDOM.render(
+  <Page/>,
   document.getElementById('content')
 );
-window.performance.mark('end');
-window.performance.measure('Render <App />', 'begin', 'end');

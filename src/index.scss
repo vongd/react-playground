@@ -140,3 +140,17 @@ html {
     background-color: $shadow-color;
   }
 }
+
+.headerBar {
+  height: 50px;
+	background-color: yellow;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.footerBar {
+  height: 50px;
+	background-color: red;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
