@@ -2,10 +2,8 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss';
 
-//class App extends Component {}
-
-var Page = React.createClass({
-  render: function() {
+class Page extends Component {
+  render(){
     return (
       <div>
       <HeaderBar/>
@@ -14,23 +12,36 @@ var Page = React.createClass({
       </div>
     );
   }
-});
+}
+
+// var Page = React.createClass({
+//   render: function() {
+//     return (
+//       <div>
+//       <HeaderBar/>
+//       <BodyText/>
+//       <FooterBar/>
+//       </div>
+//     );
+//   }
+// });
 
 var HeaderBar = React.createClass({
   render: function() {
     return (
       <div className="headerBar">
+      HEADER
         <ul className="left-side">
   				<li><a href="#">BRAND</a></li>
   				<li><a href="#">SERVICES</a></li>
-  				<ul className="dropdown">
+  				{/* <ul className="dropdown">
   					<li><a href="#">Weddings</a></li>
   					<li><a href="#">Portraits</a></li>
   				</ul>
   				<ul className="sub-menu2">
   					<li><a href="#">School</a></li>
   					<li><a href="#">Family</a></li>
-  				</ul>
+  				</ul> */}
   			</ul>
   			<ul className="right-side">
   				<li><a href="#">SIGN UP</a></li>

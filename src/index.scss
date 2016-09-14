@@ -142,15 +142,52 @@ html {
 }
 
 .headerBar {
+  position: absolute;
+  right: 0;
+  top: 0;
+  left: 0;
+  text-align: center;
   height: 50px;
-	background-color: yellow;
-	background-repeat: no-repeat;
-	background-size: cover;
+	background-color: #00FFFF;
+	// background-repeat: no-repeat;
+	// background-size: cover;
+
+  .left-side li {
+    display:inline-block;
+    float: left;
+    list-style: none;
+    margin: 0px 6px 0px 6px;
+  }
+
+  .dropdown {
+    list-style: none;
+  }
+
+  .sub-menu2 {
+    list-style: none;
+  }
+
+  .right-side li{
+    display: inline;
+    float: right;
+    margin: 0px 6px 0px 6px;
+  }
+}
+
+.bodyText {
+  text-align: center;
+  margin-top: 50px;
 }
 
 .footerBar {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  color: #F8F8FF;
   height: 50px;
-	background-color: red;
-	background-repeat: no-repeat;
-	background-size: cover;
+	background-color: #000000;
+	//background-repeat: no-repeat;
+	//background-size: cover;
 }
