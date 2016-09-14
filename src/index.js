@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss';
+import Dropdown from './Dropdown';
 
 class Page extends Component {
   render(){
