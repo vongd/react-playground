@@ -141,6 +141,10 @@ html {
   }
 }
 
+a:-webkit-any-link{
+text-decoration:none;
+}
+
 .headerBar {
   position: absolute;
   right: 0;
@@ -149,6 +153,7 @@ html {
   text-align: center;
   height: 50px;
 	background-color: #00FFFF;
+  text-decoration: none;
 	// background-repeat: no-repeat;
 	// background-size: cover;
 
@@ -157,6 +162,7 @@ html {
     float: left;
     list-style: none;
     margin: 0px 6px 0px 6px;
+    text-decoration: none;
   }
 
   .dropdown {
@@ -171,6 +177,7 @@ html {
     display: inline;
     float: right;
     margin: 0px 6px 0px 6px;
+    text-decoration: none;
   }
 }
 
