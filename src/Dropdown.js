@@ -10,19 +10,21 @@ var Dropdown = React.createClass({
   },
 
   select: function(item) {
-
+    this.props.selected = item;
   },
 
   show: function() {
-
+    this.setState({ listVisible: true });
+    document.addEvenListener("click", this.hide);
   },
 
   hide: function() {
-
+    this.setState({ listVisible: false });
+    document.removeEventListener("click", this.hide);
   },
 
   render: function(){
-    <div>Hello</div>
+    return <div>hello</div>
   }
 
 })
