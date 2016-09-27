@@ -31,7 +31,7 @@ var HeaderBar = React.createClass({
   render: function() {
     return (
       <div className="headerBar">
-      HEADER
+      HEADER THIS STUFF
         <ul className="left-side">
   				<li><a href="#">BRAND</a></li>
   				<li><a href="#">SERVICES</a></li>
@@ -46,8 +46,8 @@ var HeaderBar = React.createClass({
   			</ul>
   			<ul className="right-side">
   				<li><a href="#">SIGN UP</a></li>
+  				<li><a href="#">CONTACT</a></li>
   				<li><a href="#">LOG IN</a></li>
-  				<li><a href="#">HELP</a></li>
   			</ul>
       </div>
     );
@@ -58,7 +58,7 @@ var BodyText = React.createClass({
   render: function() {
     return (
       <div className="bodyText">
-      BODY
+      TALKING BODY!
       </div>
     );
   }
@@ -68,7 +68,9 @@ var FooterBar = React.createClass({
   render: function() {
     return (
       <div className="footerBar">
-      FOOTER
+        <div className="footerText">
+          © 2016 DAVID VONG | ALL RIGHTS RESERVED | UNITED STATES
+        </div>
       </div>
     );
   }
