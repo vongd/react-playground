@@ -34,15 +34,15 @@ var HeaderBar = React.createClass({
       HEADER THIS STUFF
         <ul className="left-side">
   				<li><a href="#">BRAND</a></li>
-  				<li><a href="#">SERVICES</a></li>
-  				{/* <ul className="dropdown">
+  				<li><a href="/Services">SERVICES</a></li>
+  				<ul className="dropdown">
   					<li><a href="#">Weddings</a></li>
   					<li><a href="#">Portraits</a></li>
   				</ul>
   				<ul className="sub-menu2">
   					<li><a href="#">School</a></li>
   					<li><a href="#">Family</a></li>
-  				</ul> */}
+  				</ul>
   			</ul>
   			<ul className="right-side">
   				<li><a href="#">SIGN UP</a></li>
@@ -69,7 +69,7 @@ var FooterBar = React.createClass({
     return (
       <div className="footerBar">
         <div className="footerText">
-          © 2016 DAVID VONG | ALL RIGHTS RESERVED | UNITED STATES
+          COPYRIGHT © 2016 DAVID VONG | ALL RIGHTS RESERVED | UNITED STATES
         </div>
       </div>
     );
