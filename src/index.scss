@@ -24,10 +24,20 @@ a:-webkit-any-link{
 text-decoration:none;
 }
 
+html {height:100%;}
+body {height:100%;
+  background: url("/images/toyota-ae86.jpg") no-repeat center center fixed;
+}
+
+.content {height:100%;}
+.container {height:100%;}
+
+
 .headerBar {
-  position: absolute;
-  right: 0;
-  left: 0;
+  // position: absolute;
+  // right: 0;
+  // left: 0;
+  padding: 10px 10px 10px 10px;
   color: #fcfff4;
   text-shadow: 1px 1px #404040;
 
@@ -39,7 +49,8 @@ text-decoration:none;
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfff4', endColorstr='#D3C8A8',GradientType=0 ); /* IE6-9 */
 
   .title {
-    margin: -3px 6px 0px 6px;
+    margin: 0px 0px 0px 8px;
+    // padding:
   }
 
   a:hover {
@@ -57,30 +68,36 @@ text-decoration:none;
   // .sub-menu2 {
   //   list-style: none;
   // }
+  
   .right-side {
+    list-style: none;
+    float: right;
     margin: 0px 0px 0px 0px;
   }
 
   .right-side li{
-    float: right;
-    list-style: none;
+    display: inline-block;
     margin: -3px 6px 0px 6px;
   }
 }
 
 .bodyText {
+  height:92%;
   text-align: center;
   color: #fcfff4;
-  margin-top: 35px;
-  min-height: 100%;
-  min-width: 1024px;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-image: url("/images/toyota-ae86.jpg");
-  background-position: center;
-  background-size: 100%;
+  // margin-top: 19px;
+  // min-height: 100%;
+  // min-width: 1024px;
+  // width: 100%;
+  // position: absolute;
+  // top: 0;
+  // left: 0;
+  // height: 600px;
+  // background-size: cover;
+  // background: url("/images/toyota-ae86.jpg") no-repeat center center fixed;
+  // background-image: url("/images/toyota-ae86.jpg");
+  // background-position: center;
+  // background-size: 100%;
 }
 
 .footerBar {
